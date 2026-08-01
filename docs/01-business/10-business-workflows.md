@@ -1,410 +1,208 @@
 # 10. Business Workflows
 
----
+## 1. Introduction
+Business workflows define the end-to-end operational processes of the KrewOps Digital Workforce Marketplace. They describe how Work Owners, Workers, Workforce Providers, Service Businesses and Platform Administrators interact to complete work from discovery through payment and review.
 
-# 1. Introduction
+## 2. Marketplace Overview
 
-Business workflows describe the sequence of activities performed by users and the system to achieve business objectives. These workflows ensure consistent execution of recruitment processes, improve collaboration between stakeholders, and provide a clear understanding of how KrewOps supports the complete hiring lifecycle.
+Primary Marketplace Flows
+1. Work Owner posts work and receives quotations.
+2. Worker publishes services and receives direct bookings.
 
-The workflows documented in this chapter represent the logical business processes independent of technical implementation.
+## 3. End-to-End Marketplace Workflow
 
----
+Register
+↓
+Create Profile
+↓
+Post Work OR Publish Service
+↓
+Discover
+↓
+Submit Quote / Direct Booking
+↓
+Booking Confirmation
+↓
+Work Execution
+↓
+Payment
+↓
+Rating & Review
 
-# 2. End-to-End Recruitment Workflow
+## 4. Work Posting Workflow
 
-```mermaid
-flowchart TD
+Objective:
+Allow a Work Owner to publish a work request.
 
-A[Recruiter Creates Job]
-B[Job Approval]
-C[Publish Job]
-D[Candidate Applies]
-E[Resume Screening]
-F[Shortlist Candidate]
-G[Interview Scheduling]
-H[Conduct Interviews]
-I[Collect Feedback]
-J[Hiring Decision]
-K[Generate Offer]
-L[Candidate Response]
-M[Employee Onboarding]
+Actors:
+- Work Owner
+- Platform
 
-A --> B
-B --> C
-C --> D
-D --> E
-E --> F
-F --> G
-G --> H
-H --> I
-I --> J
-J --> K
-K --> L
-L --> M
-```
+Steps:
+1. Login
+2. Select Category
+3. Enter Work Details
+4. Select Location
+5. Upload Images (Optional)
+6. Publish Work
+7. Notify Nearby Workers
 
----
+Outcome:
+Published work request.
 
-# 3. Job Creation Workflow
+## 5. Worker Registration Workflow
 
-## Objective
+1. Register using Mobile Number
+2. Verify OTP
+3. Complete Profile
+4. Add Skills
+5. Upload Verification Documents
+6. Publish Profile
 
-Create and publish an approved job opening.
+## 6. Service Listing Workflow
 
-```mermaid
-flowchart LR
+1. Select Service Category
+2. Enter Pricing
+3. Define Service Area
+4. Add Photos
+5. Set Availability
+6. Publish Listing
 
-Recruiter --> CreateJob
-CreateJob --> SaveDraft
-SaveDraft --> SubmitApproval
-SubmitApproval --> HiringManager
-HiringManager --> Approved
-Approved --> Publish
-Publish --> CareerPortal
-```
+## 7. Work Discovery Workflow
 
-### Actors
-
-- Recruiter
-- Hiring Manager
-- HR Administrator
-
-### Outcome
-
-Approved job becomes available for applications.
-
----
-
-# 4. Candidate Application Workflow
-
-```mermaid
-flowchart TD
-
-Candidate --> Register
-Register --> CompleteProfile
-CompleteProfile --> UploadResume
-UploadResume --> SearchJobs
-SearchJobs --> ApplyJob
-ApplyJob --> Confirmation
-```
-
-### Outcome
-
-Application enters recruitment pipeline.
-
----
-
-# 5. Resume Screening Workflow
-
-```mermaid
-flowchart TD
-
-Application --> ResumeReview
-ResumeReview --> SkillEvaluation
-SkillEvaluation --> ExperienceEvaluation
-ExperienceEvaluation --> ScreeningDecision
-
-ScreeningDecision --> Shortlisted
-ScreeningDecision --> Rejected
-```
-
-### Business Rules
-
-- Duplicate applications prevented
-- Mandatory qualifications validated
-- Recruiter comments recorded
-
----
-
-# 6. Interview Scheduling Workflow
-
-```mermaid
-flowchart TD
-
-Shortlisted --> SelectInterviewers
-SelectInterviewers --> CheckAvailability
-CheckAvailability --> ScheduleInterview
-ScheduleInterview --> SendInvitations
-SendInvitations --> CandidateConfirmation
-```
-
-### System Actions
-
-- Calendar invitation
-- Email notification
-- Reminder scheduling
-- Audit logging
-
----
-
-# 7. Interview Execution Workflow
-
-```mermaid
-flowchart TD
-
-InterviewScheduled --> ConductInterview
-ConductInterview --> CompleteScorecard
-CompleteScorecard --> SubmitFeedback
-SubmitFeedback --> HiringRecommendation
-```
-
-### Participants
-
-- Candidate
-- Interviewers
-- Hiring Manager
-
----
-
-# 8. Hiring Decision Workflow
-
-```mermaid
-flowchart TD
-
-InterviewFeedback --> RecruiterReview
-RecruiterReview --> HiringManagerReview
-HiringManagerReview --> FinalDecision
-
-FinalDecision --> Hire
-FinalDecision --> Hold
-FinalDecision --> Reject
-```
-
-### Decision Criteria
-
-- Technical score
-- Behavioral evaluation
-- Experience
+Worker searches work by:
+- Category
+- Location
 - Budget
-- Team fit
+- Date
+- Distance
 
----
+## 8. Service Discovery Workflow
 
-# 9. Offer Approval Workflow
+Work Owner searches:
+- Skills
+- Rating
+- Distance
+- Price
+- Availability
 
-```mermaid
-flowchart TD
+## 9. Quote Submission Workflow
 
-OfferDraft --> RecruiterApproval
-RecruiterApproval --> HRApproval
-HRApproval --> FinanceApproval
-FinanceApproval --> ExecutiveApproval
-ExecutiveApproval --> OfferReleased
-```
+1. Open Work Request
+2. Submit Quote
+3. Enter Price
+4. Estimated Duration
+5. Remarks
+6. Send Quote
 
-Organizations may configure approval levels based on internal policies.
+## 10. Quote Evaluation Workflow
 
----
+Owner compares:
+- Price
+- Rating
+- Experience
+- Distance
+- Reviews
 
-# 10. Offer Acceptance Workflow
+Accept Quote -> Booking Created
 
-```mermaid
-flowchart TD
+## 11. Direct Booking Workflow
 
-OfferReleased --> CandidateReceivesOffer
-CandidateReceivesOffer --> CandidateDecision
+Search Service
+→ View Profile
+→ Select Worker
+→ Create Booking
+→ Confirmation
 
-CandidateDecision --> Accept
-CandidateDecision --> Reject
-CandidateDecision --> Negotiate
+## 12. Booking Workflow
 
-Accept --> Onboarding
-Reject --> CloseApplication
-Negotiate --> RevisedOffer
-```
+States:
+Pending → Confirmed → In Progress → Completed → Closed
+Cancelled → Closed
 
----
+## 13. Work Execution Workflow
 
-# 11. User Provisioning Workflow
+Worker Starts Work
+→ Updates Progress
+→ Marks Complete
 
-```mermaid
-flowchart TD
+## 14. Payment Workflow
 
-Administrator --> InviteUser
-InviteUser --> EmailInvitation
-EmailInvitation --> Registration
-Registration --> EmailVerification
-EmailVerification --> ActivateAccount
-```
+Booking Completed
+→ Payment
+→ Settlement
+→ Receipt
 
----
+## 15. Rating & Review Workflow
 
-# 12. Authentication Workflow
+Owner Rates Worker
+Worker Rates Owner
+Marketplace Reputation Updated
 
-```mermaid
-flowchart TD
+## 16. Worker Verification Workflow
 
-Login --> ValidateCredentials
-ValidateCredentials --> MFA
-MFA --> GenerateSession
-GenerateSession --> Dashboard
-```
+Document Upload
+→ Verification
+→ Badge Assignment
 
-Failed authentication attempts shall be logged and handled according to organizational security policies.
+## 17. Dispute Workflow
 
----
+Complaint
+→ Review
+→ Evidence
+→ Resolution
+→ Refund (if applicable)
 
-# 13. Approval Workflow
+## 18. Notification Workflow
 
-```mermaid
-flowchart TD
+Business Event triggers:
+- Push Notification
+- In-App Notification
+- SMS
+- WhatsApp (Optional)
+- Email
 
-BusinessRequest --> SubmitApproval
-SubmitApproval --> Reviewer
+## 19. Search Workflow
 
-Reviewer --> Approve
-Reviewer --> Reject
-Reviewer --> RequestChanges
+Search
+→ Filter
+→ Sort
+→ Results
 
-Approve --> NextApproval
-Reject --> End
-RequestChanges --> SubmitApproval
-```
+## 20. Admin Workflow
 
-This workflow is reusable for jobs, offers, and administrative requests.
+Verify Users
+Moderate Content
+Manage Categories
+Resolve Disputes
+View Reports
 
----
+## 21. Workflow Monitoring
 
-# 14. Notification Workflow
+Track:
+- Booking Status
+- Quote Status
+- Payment Status
+- SLA
+- Audit Trail
 
-```mermaid
-flowchart TD
+## 22. Workflow Configuration
 
-BusinessEvent --> NotificationEngine
-NotificationEngine --> Email
-NotificationEngine --> SMS
-NotificationEngine --> WhatsApp
-NotificationEngine --> PushNotification
-NotificationEngine --> InAppNotification
-```
+Administrators configure:
+- Categories
+- Booking Rules
+- Payment Rules
+- Notification Rules
 
-Supported business events include:
+## 23. Workflow Audit
 
-- Registration
-- Job Published
-- Application Submitted
-- Interview Scheduled
-- Offer Released
-- Offer Accepted
-
----
-
-# 15. Candidate Status Workflow
-
-```mermaid
-stateDiagram-v2
-
-[*] --> Registered
-Registered --> Applied
-Applied --> Screening
-Screening --> Shortlisted
-Screening --> Rejected
-Shortlisted --> InterviewScheduled
-InterviewScheduled --> InterviewCompleted
-InterviewCompleted --> OfferPending
-OfferPending --> Offered
-Offered --> Accepted
-Offered --> Rejected
-Accepted --> Joined
-Rejected --> [*]
-Joined --> [*]
-```
-
----
-
-# 16. Job Lifecycle Workflow
-
-```mermaid
-stateDiagram-v2
-
-[*] --> Draft
-Draft --> PendingApproval
-PendingApproval --> Approved
-Approved --> Published
-Published --> Closed
-Closed --> Archived
-Archived --> [*]
-```
-
----
-
-# 17. Offer Lifecycle Workflow
-
-```mermaid
-stateDiagram-v2
-
-[*] --> Draft
-Draft --> Approval
-Approval --> Released
-Released --> Accepted
-Released --> Rejected
-Released --> Expired
-Accepted --> Joined
-```
-
----
-
-# 18. Workflow Exception Handling
-
-The platform shall support exception handling for common scenarios:
-
-| Scenario | Expected Action |
-|----------|-----------------|
-| Candidate Withdraws | Close application and notify recruiter |
-| Interview Cancelled | Reschedule or close interview |
-| Offer Expired | Update status and notify recruiter |
-| Approval Rejected | Return workflow to previous stage |
-| User Deactivated | Reassign ownership of active work |
-
----
-
-# 19. Workflow Monitoring
-
-The system shall provide visibility into workflow execution, including:
-
-- Current workflow stage
-- Pending approvals
-- Bottlenecks
-- Average processing time
-- SLA breaches
-- Escalations
-- Historical workflow execution
-
----
-
-# 20. Workflow Configuration
-
-Organizations shall configure:
-
-- Recruitment stages
-- Approval levels
-- Notification triggers
-- Escalation rules
-- SLA thresholds
-- Workflow transitions
-- Auto-approval conditions
-
-Configuration changes shall not affect historical workflow executions.
-
----
-
-# 21. Workflow Audit Requirements
-
-Every workflow execution shall record:
-
-- Workflow instance identifier
-- Current stage
-- Previous stage
-- User performing action
+Capture:
+- User
 - Timestamp
+- Previous Status
+- New Status
 - Comments
-- Approval decision
-- Outcome
 
-Workflow history shall be immutable and available for audit and reporting.
+## 24. Summary
 
----
-
-# 22. Summary
-
-Business workflows define the operational processes that drive recruitment activities within KrewOps. From job creation through onboarding, each workflow ensures consistent execution, accountability, traceability, and collaboration across all stakeholders. By combining configurable workflows with comprehensive audit trails and automation, the platform enables organizations to standardize hiring practices while remaining flexible enough to support diverse business requirements.
+These workflows define the operational lifecycle of the KrewOps marketplace covering work posting, service discovery, quotation, booking, execution, payment, and reputation management.
