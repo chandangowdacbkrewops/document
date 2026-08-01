@@ -4,7 +4,9 @@
 
 # 1. Introduction
 
-This chapter documents the key assumptions, risks, dependencies, constraints, and mitigation strategies associated with the successful delivery and operation of the KrewOps platform. These factors provide transparency for stakeholders and help project teams proactively identify and manage uncertainties throughout the product lifecycle.
+This chapter documents the key assumptions, risks, dependencies, constraints, and mitigation strategies associated with the successful delivery and operation of the KrewOps Digital Workforce Marketplace.
+
+These factors provide transparency for stakeholders and help project teams proactively identify, monitor, and manage uncertainties throughout the product lifecycle.
 
 ---
 
@@ -12,167 +14,161 @@ This chapter documents the key assumptions, risks, dependencies, constraints, an
 
 The objectives of this document are to:
 
-- Capture assumptions made during planning.
-- Identify technical and business risks.
-- Highlight external and internal dependencies.
+- Capture business and technical assumptions.
+- Identify business, operational, and technical risks.
+- Highlight internal and external dependencies.
 - Define project constraints.
 - Establish mitigation strategies.
-- Improve project governance.
-- Support delivery planning.
+- Improve governance and decision making.
+- Support successful product delivery.
 
 ---
 
 # 3. Project Assumptions
 
-The following assumptions have been made during business analysis.
-
 | ID | Assumption |
 |----|------------|
-| A-001 | Organizations have internet connectivity for accessing the platform. |
-| A-002 | Users possess valid email addresses for authentication and communication. |
-| A-003 | Customer organizations will provide authorized administrators. |
-| A-004 | Business stakeholders will participate in requirement validation. |
-| A-005 | Required third-party integrations expose stable APIs. |
-| A-006 | Cloud infrastructure will be provisioned before production deployment. |
-| A-007 | Required security certificates will be available before go-live. |
-| A-008 | Users possess basic computer literacy. |
-| A-009 | Supported browsers remain compatible with modern web standards. |
-| A-010 | Organizational approval processes can be configured within supported workflow capabilities. |
+| A-001 | Users have internet connectivity to access the platform. |
+| A-002 | Users possess a valid mobile number for OTP verification. |
+| A-003 | Work Owners and Workers will complete profile registration before using marketplace services. |
+| A-004 | Business stakeholders actively participate in requirement validation. |
+| A-005 | External services expose stable APIs. |
+| A-006 | Cloud infrastructure will be available before production deployment. |
+| A-007 | Security certificates will be provisioned before go-live. |
+| A-008 | Users possess basic smartphone or computer literacy. |
+| A-009 | Supported browsers comply with modern web standards. |
+| A-010 | Marketplace policies are configurable without code changes where feasible. |
 
 ---
 
 # 4. Business Assumptions
 
-- Recruitment processes are largely standardized across departments.
-- Hiring managers participate in approval workflows.
-- Candidates have access to email communications.
-- Recruitment policies remain under organizational control.
-- Organizations define their own interview processes.
-- Regulatory obligations vary by customer deployment.
+- Users prefer a digital marketplace over traditional manual methods.
+- Work Owners are willing to compare quotations digitally.
+- Workers are willing to publish service listings.
+- Ratings and reviews improve marketplace trust.
+- Digital payments increase transaction transparency.
+- Marketplace growth depends on balanced participation from Work Owners and Workers.
 
 ---
 
 # 5. Technical Assumptions
 
 - REST APIs are the primary integration mechanism.
-- External identity providers support industry-standard protocols.
-- Object storage is available for document management.
+- Object storage is available for documents and images.
 - Databases support transactional consistency.
 - Production infrastructure supports horizontal scaling.
 - Monitoring and logging infrastructure is available.
+- Push notification services are available.
 
 ---
 
 # 6. Business Risks
 
-| Risk ID | Description | Impact | Likelihood | Mitigation |
-|---------|-------------|--------|------------|------------|
-| R-BUS-001 | Changing recruitment policies | Medium | Medium | Configurable workflows |
-| R-BUS-002 | Delayed stakeholder approvals | High | Medium | Regular review meetings |
-| R-BUS-003 | Low user adoption | High | Low | Training and onboarding |
-| R-BUS-004 | Poor data quality | High | Medium | Validation and review processes |
+| Risk | Impact | Mitigation |
+|------|--------|------------|
+| Low Work Owner adoption | High | Marketing & onboarding |
+| Low Worker adoption | High | Incentive programs |
+| Fake service listings | High | Verification process |
+| Marketplace liquidity | High | Regional rollout strategy |
+| Pricing disputes | Medium | Transparent quotation workflow |
 
 ---
 
 # 7. Technical Risks
 
-| Risk ID | Description | Impact | Likelihood | Mitigation |
-|---------|-------------|--------|------------|------------|
-| R-TECH-001 | Third-party API changes | High | Medium | Versioned integrations |
-| R-TECH-002 | Infrastructure outages | High | Low | High availability architecture |
-| R-TECH-003 | Performance degradation | High | Medium | Capacity planning and monitoring |
-| R-TECH-004 | Security vulnerabilities | Critical | Medium | Secure SDLC and regular security testing |
-| R-TECH-005 | Data loss | Critical | Low | Backup and disaster recovery |
+| Risk | Impact | Mitigation |
+|------|--------|------------|
+| Third-party API changes | High | Versioned integrations |
+| Infrastructure outage | High | High availability architecture |
+| Performance degradation | High | Monitoring & scaling |
+| Security vulnerabilities | Critical | Secure SDLC |
+| Data loss | Critical | Backup & Disaster Recovery |
 
 ---
 
 # 8. Operational Risks
 
-- Delayed incident response.
-- Insufficient monitoring.
-- Inadequate backup validation.
-- Configuration drift.
-- Improper access management.
-- Deployment failures.
+- Delayed incident response
+- Insufficient monitoring
+- Deployment failures
+- Configuration drift
+- Payment settlement delays
+- Worker verification delays
 
-Mitigation strategies include:
+Mitigation:
 
-- Automated monitoring.
-- Infrastructure as Code (IaC).
-- Change management.
-- Access reviews.
-- Automated deployment pipelines.
+- Infrastructure as Code
+- CI/CD
+- Monitoring
+- Operational Runbooks
 
 ---
 
 # 9. Security Risks
 
-Potential security threats include:
+- Unauthorized access
+- Credential compromise
+- Data leakage
+- Fake user accounts
+- Fraudulent bookings
+- Malware uploads
+- API abuse
+- DDoS attacks
 
-- Unauthorized access.
-- Credential compromise.
-- Data leakage.
-- Insider threats.
-- API abuse.
-- Malware in uploaded documents.
-- Denial-of-Service attacks.
+Mitigation:
 
-Mitigation measures include:
-
-- Multi-Factor Authentication (MFA).
-- Role-Based Access Control (RBAC).
-- Encryption at rest and in transit.
-- Security monitoring.
-- Audit logging.
-- Virus scanning.
-- Rate limiting.
-- Regular vulnerability assessments.
+- OTP Authentication
+- RBAC
+- Encryption
+- Audit Logging
+- Virus Scanning
+- Rate Limiting
+- Security Monitoring
 
 ---
 
 # 10. Project Dependencies
 
-## Internal Dependencies
+## Internal
 
 - Product Management
 - Business Analysis
-- UX/UI Design
+- UX/UI
 - Architecture
-- Backend Development
-- Frontend Development
-- Quality Assurance
+- Backend
+- Frontend
+- Mobile Development
+- QA
 - DevOps
-- Security Review
+- Security
 - Documentation
 
----
+## External
 
-## External Dependencies
-
-- Email service providers.
-- Calendar providers.
-- Identity providers.
-- Payment gateways.
-- Video conferencing platforms.
-- Job boards.
-- Cloud infrastructure.
-- DNS and SSL certificate providers.
+- Payment Gateway
+- SMS Gateway
+- Email Provider
+- WhatsApp Business API
+- Maps & Location Services
+- Cloud Infrastructure
+- DNS
+- SSL Certificates
 
 ---
 
 # 11. Technical Dependencies
 
-The platform depends on:
-
-- Relational Database Management System (RDBMS).
-- Object storage for documents.
-- Identity provider supporting OAuth2/OIDC/SAML.
-- Email delivery service.
-- Notification infrastructure.
-- Monitoring platform.
-- Centralized logging solution.
-- Backup solution.
-- Container orchestration platform.
+- PostgreSQL
+- Object Storage
+- Keycloak / Identity Provider
+- Redis
+- Kafka (optional)
+- Notification Services
+- Monitoring Platform
+- Centralized Logging
+- Kubernetes
+- Container Registry
 
 ---
 
@@ -180,103 +176,90 @@ The platform depends on:
 
 Examples include:
 
-- Google Workspace
-- Microsoft 365
-- Zoom
-- Microsoft Teams
-- LinkedIn
+- Razorpay / Stripe
+- Google Maps
+- Firebase Cloud Messaging
 - WhatsApp Business API
-- SMTP providers
-- Cloud object storage services
-
-Third-party integrations shall be monitored for API version changes and service availability.
+- SMTP Providers
+- Cloud Object Storage
 
 ---
 
 # 13. Constraints
 
-The project operates under the following constraints:
+## Business
 
-### Business Constraints
+- Budget
+- Delivery timeline
+- Marketplace adoption
+- Regulatory compliance
 
-- Budget limitations.
-- Delivery timelines.
-- Regulatory obligations.
-- Customer-specific policies.
+## Technical
 
-### Technical Constraints
+- Browser compatibility
+- Internet connectivity
+- API rate limits
+- Third-party availability
 
-- Browser compatibility.
-- Internet connectivity.
-- API rate limits.
-- Third-party service availability.
-- Infrastructure capacity.
+## Operational
 
-### Operational Constraints
-
-- Maintenance windows.
-- Support availability.
-- Disaster recovery objectives.
-- Data retention requirements.
+- Maintenance windows
+- Support availability
+- Backup policies
+- Disaster Recovery objectives
 
 ---
 
 # 14. Risk Monitoring
 
-Risks shall be reviewed throughout the project lifecycle.
+Every risk shall include:
 
-Each identified risk shall include:
-
-- Risk owner.
-- Current status.
-- Review frequency.
-- Mitigation progress.
-- Residual risk assessment.
-
-Risk reviews should occur at regular project governance meetings.
+- Owner
+- Status
+- Review Frequency
+- Mitigation
+- Residual Risk
 
 ---
 
 # 15. Change Management
 
-Changes affecting assumptions, risks, or dependencies shall:
+Changes shall:
 
-- Be documented.
-- Undergo impact assessment.
-- Receive stakeholder approval.
-- Be version controlled.
-- Be communicated to affected teams.
+- Be documented
+- Undergo impact assessment
+- Receive approval
+- Be version controlled
+- Be communicated
 
 ---
 
 # 16. Success Factors
 
-Successful delivery of KrewOps depends on:
-
-- Clear business requirements.
-- Active stakeholder participation.
-- Stable technical architecture.
-- Secure implementation.
-- Effective testing.
-- High-quality documentation.
-- Continuous monitoring.
-- Reliable operational support.
+- Clear business requirements
+- Active stakeholder participation
+- Scalable architecture
+- Secure implementation
+- Effective testing
+- Continuous monitoring
+- Marketplace adoption
+- Positive customer experience
 
 ---
 
 # 17. Exit Criteria
 
-The Business Requirements phase shall be considered complete when:
+The BRD phase is complete when:
 
-- All business requirements are approved.
-- Stakeholders have reviewed assumptions.
-- Major project risks are documented.
-- Dependencies are identified.
-- Constraints are accepted.
-- BRD receives formal approval.
+- Requirements approved
+- Stakeholders approve assumptions
+- Risks documented
+- Dependencies identified
+- Constraints accepted
+- BRD approved
 
 ---
 
 # 18. Summary
 
-This chapter identifies the assumptions, risks, dependencies, and constraints that influence the successful delivery of the KrewOps platform. By documenting these factors early, project teams can proactively manage uncertainty, reduce implementation risk, improve governance, and support informed decision-making throughout the product lifecycle. Together with the preceding chapters, this document completes the Business Requirements Document (BRD) and establishes a comprehensive foundation for subsequent product planning, solution architecture, software design, implementation, testing, and operational readiness.
+This chapter documents the assumptions, risks, dependencies, and constraints that influence the successful delivery of the KrewOps Digital Workforce Marketplace. It provides a structured approach to managing uncertainty, reducing delivery risk, and supporting informed decision-making throughout product development and operations.
