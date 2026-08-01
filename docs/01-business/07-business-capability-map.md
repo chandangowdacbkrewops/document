@@ -4,55 +4,35 @@
 
 # 1. Introduction
 
-The Business Capability Map identifies the core business functions that KrewOps must provide to support an end-to-end recruitment lifecycle. Unlike organizational structures or implementation details, business capabilities represent stable functional areas that deliver business value regardless of technology or operational changes.
+The Business Capability Map identifies the core business capabilities required to operate the KrewOps digital workforce marketplace. Business capabilities represent stable business functions that remain independent of implementation technologies and organizational structures.
 
-These capabilities form the foundation for product planning, system architecture, service decomposition, and future scalability.
+These capabilities provide the foundation for business processes, system architecture, service decomposition, and future platform scalability.
 
 ---
 
 # 2. Capability Domains
 
-KrewOps capabilities are grouped into the following domains:
-
 | Domain | Description |
 |---------|-------------|
-| Organization Management | Manage organizations and tenants |
 | Identity & Access Management | Authentication and authorization |
-| User Management | User lifecycle management |
-| Recruitment Management | End-to-end hiring process |
-| Candidate Management | Candidate lifecycle |
-| Job Management | Job requisition and publishing |
-| Interview Management | Interview planning and execution |
-| Offer Management | Offer generation and approval |
+| User & Profile Management | User lifecycle and profile management |
+| Skill & Category Management | Workforce skills and service categories |
+| Work Marketplace | Work request management |
+| Service Marketplace | Worker and business service listings |
+| Quotation Management | Quote submission and comparison |
+| Booking & Work Order Management | Booking lifecycle and work execution |
+| Payment Management | Payment processing and settlements |
 | Communication Management | Notifications and messaging |
-| Analytics & Reporting | Dashboards and insights |
+| Rating & Review Management | Reputation and trust management |
+| Analytics & Reporting | Marketplace insights |
 | Administration | Platform configuration |
-| Billing & Subscription | Subscription lifecycle |
+| Billing & Subscription | Commercial operations |
 | Security & Compliance | Governance and auditing |
-| Integration | External system connectivity |
+| Integration | External platform connectivity |
 
 ---
 
-# 3. Organization Management
-
-## Objective
-
-Support multiple organizations (tenants) within a single platform.
-
-### Capabilities
-
-- Organization registration
-- Tenant provisioning
-- Company profile management
-- Department management
-- Business unit management
-- Office location management
-- Organization branding
-- Organization settings
-
----
-
-# 4. Identity & Access Management
+# 3. Identity & Access Management
 
 ## Objective
 
@@ -60,135 +40,145 @@ Provide secure authentication and authorization.
 
 ### Capabilities
 
-- User authentication
-- Single Sign-On (SSO)
-- Multi-Factor Authentication (MFA)
-- Password management
-- Session management
+- OTP Authentication
+- Social Login
+- Session Management
+- JWT Authentication
 - Role-Based Access Control (RBAC)
-- Fine-grained authorization
-- API security
-- Token management
+- Fine-Grained Authorization
+- Multi-device Login
+- Account Recovery
+- API Security
 
 ---
 
-# 5. User Management
+# 4. User & Profile Management
 
 ## Objective
 
-Manage users throughout their lifecycle.
+Manage user lifecycle and professional profiles.
 
 ### Capabilities
 
-- User registration
-- User invitation
-- User activation
-- User deactivation
-- Role assignment
-- Team assignment
-- Profile management
-- User preferences
-- Permission management
+- User Registration
+- Mobile Verification
+- Profile Management
+- Address Management
+- Profile Verification
+- Availability Management
+- Profile Visibility
+- Identity Verification
+- User Preferences
 
 ---
 
-# 6. Recruitment Management
+# 5. Skill & Category Management
 
 ## Objective
 
-Support complete recruitment operations.
+Manage workforce skills and service categories.
 
 ### Capabilities
 
-- Workforce planning
-- Job requisition
-- Hiring workflow
-- Recruitment pipeline
-- Hiring approvals
-- Candidate evaluation
-- Offer management
-- Hiring analytics
+- Skill Management
+- Category Management
+- Subcategory Management
+- Experience Levels
+- Certification Management
+- Service Areas
+- Search Tags
 
 ---
 
-# 7. Job Management
+# 6. Work Marketplace
 
 ## Objective
 
-Manage job lifecycle.
+Allow work owners to publish work requests.
 
 ### Capabilities
 
-- Job creation
-- Job editing
-- Job approval
-- Job publishing
-- Job closing
-- Job reopening
-- Job duplication
-- Job templates
-- Hiring team assignment
+- Work Posting
+- Work Editing
+- Work Cancellation
+- Work Search
+- Work Discovery
+- Work Status Tracking
+- Work Expiry
+- Work History
 
 ---
 
-# 8. Candidate Management
+# 7. Service Marketplace
 
 ## Objective
 
-Manage candidate information across the recruitment lifecycle.
+Enable workers and service businesses to advertise services.
 
 ### Capabilities
 
-- Candidate registration
-- Resume upload
-- Resume parsing
-- Candidate search
-- Candidate filtering
-- Candidate tagging
-- Candidate scoring
-- Candidate notes
-- Candidate history
-- Candidate status tracking
+- Service Listings
+- Portfolio Management
+- Pricing
+- Availability
+- Location Coverage
+- Service Search
+- Featured Services
 
 ---
 
-# 9. Interview Management
+# 8. Quotation Management
 
 ## Objective
 
-Coordinate structured interview processes.
+Support transparent quotation workflows.
 
 ### Capabilities
 
-- Interview planning
-- Interview scheduling
-- Interview panel management
-- Calendar integration
-- Interview reminders
-- Interview scorecards
-- Technical assessments
-- Behavioral evaluations
-- Interview feedback
-- Final recommendation
+- Quote Submission
+- Quote Comparison
+- Quote Acceptance
+- Quote Rejection
+- Quote History
+- Quote Expiry
+- Negotiation
 
 ---
 
-# 10. Offer Management
+# 9. Booking & Work Order Management
 
 ## Objective
 
-Digitize the offer process.
+Manage the complete booking lifecycle.
 
 ### Capabilities
 
-- Compensation management
-- Offer generation
-- Approval workflow
-- Offer negotiation
-- Offer acceptance
-- Offer rejection
-- Joining confirmation
-- Offer history
+- Booking Creation
+- Booking Confirmation
+- Worker Assignment
+- Work Status Tracking
+- Booking Modification
+- Cancellation
+- Completion
+- Work History
+
+---
+
+# 10. Payment Management
+
+## Objective
+
+Enable secure digital transactions.
+
+### Capabilities
+
+- Advance Payments
+- Final Payments
+- Refunds
+- Settlement
+- Commission Management
+- Invoice Generation
+- Payment History
 
 ---
 
@@ -196,61 +186,76 @@ Digitize the offer process.
 
 ## Objective
 
-Provide consistent communication across recruitment.
+Provide communication between marketplace participants.
 
 ### Capabilities
 
-- Email notifications
-- SMS notifications
-- WhatsApp integration
-- Push notifications
-- In-app notifications
-- Reminder scheduling
-- Template management
-- Notification preferences
+- In-App Notifications
+- Push Notifications
+- SMS
+- WhatsApp
+- Email
+- Chat
+- Reminder Scheduling
+- Notification Preferences
 
 ---
 
-# 12. Analytics & Reporting
+# 12. Rating & Review Management
 
 ## Objective
 
-Provide operational and strategic insights.
+Build trust within the marketplace.
 
 ### Capabilities
 
-- Recruitment dashboard
-- Hiring funnel analytics
-- Time-to-hire reporting
-- Recruiter productivity
-- Interview analytics
-- Source effectiveness
-- Offer analytics
-- Executive dashboards
-- Export reports
+- Worker Ratings
+- Owner Ratings
+- Service Reviews
+- Review Moderation
+- Reputation Score
+- Verified Reviews
 
 ---
 
-# 13. Administration
+# 13. Analytics & Reporting
 
 ## Objective
 
-Configure and manage platform behavior.
+Provide operational and business insights.
 
 ### Capabilities
 
-- Master data management
-- Workflow configuration
-- Organization settings
-- Notification settings
-- Feature flags
-- Audit configuration
-- Template management
-- System preferences
+- Marketplace Dashboard
+- Booking Analytics
+- Revenue Reports
+- Worker Performance
+- Customer Activity
+- Quote Conversion
+- Service Popularity
+- Category Trends
 
 ---
 
-# 14. Billing & Subscription
+# 14. Administration
+
+## Objective
+
+Manage platform operations.
+
+### Capabilities
+
+- User Verification
+- Category Management
+- Platform Configuration
+- Feature Flags
+- Master Data
+- Audit Management
+- Marketplace Moderation
+
+---
+
+# 15. Billing & Subscription
 
 ## Objective
 
@@ -258,138 +263,140 @@ Manage commercial operations.
 
 ### Capabilities
 
-- Subscription plans
-- Plan upgrades
-- Plan downgrades
-- Invoice generation
-- Payment tracking
-- Billing history
-- Usage tracking
-- License management
+- Subscription Plans
+- Premium Listings
+- Featured Services
+- Invoice Generation
+- Billing History
+- Revenue Tracking
 
 ---
 
-# 15. Security & Compliance
+# 16. Security & Compliance
 
 ## Objective
 
-Protect organizational data and ensure regulatory compliance.
+Protect users and platform data.
 
 ### Capabilities
 
-- Audit logging
-- Activity tracking
-- Encryption
-- Access reviews
-- Security monitoring
-- Compliance reporting
-- Data retention
-- Privacy controls
-- Consent management
+- Audit Logging
+- Fraud Detection
+- Data Encryption
+- Access Monitoring
+- Consent Management
+- Privacy Controls
+- Data Retention
 
 ---
 
-# 16. Integration
+# 17. Integration
 
 ## Objective
 
-Enable connectivity with external systems.
+Connect with external platforms.
 
 ### Capabilities
 
-- HRMS integration
-- Payroll integration
-- Calendar integration
-- Email providers
-- Identity providers
-- Job portals
-- Assessment platforms
-- Video interview platforms
+- Payment Gateway
+- SMS Gateway
+- WhatsApp API
+- Email Provider
+- Maps & Location Services
+- Push Notification Services
 - REST APIs
 - Webhooks
 
 ---
 
-# 17. Capability Relationships
+# 18. Capability Relationships
 
-The capabilities collaborate throughout the hiring lifecycle.
+```text
+Identity & Access
+        │
+        ▼
+User & Profile
+        │
+        ▼
+Skills & Categories
+        │
+        ▼
+Work Marketplace
+        │
+        ▼
+Service Marketplace
+        │
+        ▼
+Quotation
+        │
+        ▼
+Booking & Work Order
+        │
+        ▼
+Payment
+        │
+        ▼
+Rating & Review
+        │
+        ▼
+Analytics
+```
 
-Example flow:
+Supporting Capabilities:
 
-Organization Management
-↓
-Identity & Access Management
-↓
-User Management
-↓
-Recruitment Management
-↓
-Job Management
-↓
-Candidate Management
-↓
-Interview Management
-↓
-Offer Management
-↓
-Communication Management
-↓
-Analytics & Reporting
-
-Supporting capabilities:
-
-- Security & Compliance
+- Communication
+- Security
 - Administration
-- Billing & Subscription
+- Billing
 - Integration
 
 ---
 
-# 18. Capability Maturity Roadmap
+# 19. Capability Maturity Roadmap
 
 ## Phase 1 (MVP)
 
-- Organization Management
 - User Management
-- Job Management
-- Candidate Management
-- Interview Management
-- Basic Reporting
+- Work Marketplace
+- Service Marketplace
+- Quotation
+- Booking
+- Notifications
 
 ## Phase 2
 
-- Advanced Analytics
-- Offer Management
-- Communication Automation
-- Calendar Integration
-- AI Resume Ranking
+- Online Payments
+- Ratings & Reviews
+- Analytics
+- Chat
+- Workforce Verification
 
 ## Phase 3
 
-- Workforce Planning
-- AI Candidate Matching
-- Predictive Hiring Analytics
-- Skill Intelligence
-- Recruitment Automation
-- Marketplace Integrations
+- AI-Based Matching
+- AI Price Recommendation
+- Fraud Detection
+- Smart Scheduling
+- Predictive Analytics
+- Recommendation Engine
 
 ---
 
-# 19. Strategic Business Value
+# 20. Strategic Business Value
 
 These capabilities enable KrewOps to:
 
-- Reduce hiring time
-- Improve recruiter productivity
-- Enhance candidate experience
-- Increase hiring quality
-- Standardize recruitment processes
-- Support enterprise scalability
-- Strengthen compliance
-- Enable future AI-driven recruitment
+- Connect work owners with skilled workers
+- Increase worker visibility
+- Reduce workforce discovery time
+- Improve booking transparency
+- Build marketplace trust
+- Enable secure digital payments
+- Support scalable workforce management
+- Drive long-term marketplace growth
 
 ---
 
-# 20. Summary
+# 21. Summary
 
-The Business Capability Map provides a business-centric view of KrewOps by organizing its core functions into stable capability domains. It serves as the bridge between business requirements and system design, ensuring that future product enhancements remain aligned with organizational goals while supporting scalability, security, and long-term platform evolution.
+The Business Capability Map provides a business-centric view of the KrewOps workforce marketplace by organizing its core functions into stable capability domains. These capabilities support the complete lifecycle of work discovery, service promotion, quotation, booking, payment, and reputation management while providing a scalable foundation for future AI-driven marketplace services.
