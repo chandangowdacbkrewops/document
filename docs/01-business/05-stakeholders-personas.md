@@ -4,9 +4,11 @@
 
 # 1. Introduction
 
-KrewOps serves multiple stakeholders across the hiring ecosystem. Unlike traditional recruitment platforms that optimize only for recruiters, KrewOps is designed as a collaborative platform where employers, recruiters, hiring managers, interviewers, candidates, and administrators each have clearly defined responsibilities and experiences.
+KrewOps is a digital workforce marketplace that connects work owners with skilled workers, workforce providers, and service businesses through a trusted and transparent platform.
 
-Understanding these stakeholders is essential for defining product functionality, security boundaries, workflow ownership, and future feature development.
+Unlike traditional recruitment platforms, KrewOps enables users to either publish work requirements or advertise their professional services. The platform facilitates workforce discovery, quotation management, bookings, payments, and reputation building.
+
+Understanding the needs of each stakeholder is essential for designing intuitive user experiences, secure authorization, scalable workflows, and future platform capabilities.
 
 ---
 
@@ -14,330 +16,269 @@ Understanding these stakeholders is essential for defining product functionality
 
 | Stakeholder | Primary Goal | Interaction Level |
 |-------------|--------------|------------------|
-| Organization | Hire quality talent efficiently | High |
-| HR Administrator | Configure organization and users | High |
-| Recruiter | Source and manage candidates | Very High |
-| Hiring Manager | Evaluate candidates and make hiring decisions | High |
-| Interviewer | Conduct interviews and submit feedback | Medium |
-| Candidate | Apply for jobs and track application status | High |
-| Platform Administrator | Manage platform operations | High |
-| Support Team | Resolve customer issues | Medium |
-| Finance Team | Subscription and billing management | Medium |
-| Executive Leadership | Analytics and hiring insights | Medium |
+| Work Owner | Find trusted workers and complete work efficiently | Very High |
+| Worker | Find work opportunities and increase earnings | Very High |
+| Workforce Provider | Supply workers for work requests | High |
+| Service Business | Advertise services and manage customer bookings | High |
+| Platform Administrator | Manage and monitor the marketplace | High |
+| Customer Support | Resolve user issues and disputes | Medium |
+| Finance & Operations | Manage payments and settlements | Medium |
 
 ---
 
-# 3. Organization
-
-## Description
-
-Organizations subscribe to KrewOps to streamline recruitment operations across departments.
-
-### Responsibilities
-
-- Manage company profile
-- Purchase subscriptions
-- Invite recruiters
-- Configure hiring workflows
-- Define interview processes
-- View organization analytics
-- Manage compliance
-- Configure permissions
-- Maintain hiring policies
-
-### Goals
-
-- Reduce hiring time
-- Improve candidate quality
-- Standardize recruitment
-- Increase recruiter productivity
-- Improve employer branding
-
----
-
-# 4. HR Administrator Persona
+# 3. Work Owner Persona
 
 ## Profile
 
-The HR Administrator is responsible for configuring and maintaining the recruitment platform within the organization.
+A Work Owner is an individual or business looking for skilled or semi-skilled workers to complete specific work.
+
+Examples include:
+
+- Home Owners
+- Farmers
+- Apartment Associations
+- Shop Owners
+- Contractors
+- Small Businesses
 
 ### Responsibilities
 
-- Create users
-- Assign roles
-- Configure permissions
-- Manage departments
-- Configure hiring stages
-- Maintain interview templates
-- Manage job approval workflows
-- Configure notifications
+- Register and verify account
+- Create work requests
+- Browse worker profiles
+- Receive quotations
+- Compare workers
+- Book workers
+- Track work progress
+- Complete payments
+- Rate completed work
+
+### Goals
+
+- Find trusted workers quickly
+- Receive competitive quotations
+- Transparent pricing
+- Quality workmanship
+- Timely work completion
 
 ### Pain Points
 
-- Manual configuration
-- Multiple disconnected systems
-- Inconsistent hiring process
-- Permission management complexity
+- Difficulty finding reliable workers
+- Lack of pricing transparency
+- Last-minute cancellations
+- No trusted reviews
+- Payment disputes
 
 ### Success Metrics
 
-- Faster onboarding
-- Reduced administrative effort
-- Standardized workflows
-- Secure access management
+- Time to find worker
+- Booking success rate
+- Work completion rate
+- Customer satisfaction
+- Repeat bookings
 
 ---
 
-# 5. Recruiter Persona
+# 4. Worker Persona
 
 ## Profile
 
-Recruiters spend most of their time sourcing, screening, communicating, and coordinating interviews.
+Workers provide professional or skilled services through the KrewOps marketplace.
 
-### Responsibilities
+Examples include:
 
-- Create job openings
-- Publish jobs
-- Search candidates
-- Review resumes
-- Schedule interviews
-- Communicate with candidates
-- Coordinate interviewers
-- Update application status
-- Generate offers
-
-### Goals
-
-- Hire faster
-- Improve candidate quality
-- Reduce manual work
-- Better collaboration
-- Increase offer acceptance
-
-### Pain Points
-
-- Resume overload
-- Scheduling conflicts
-- Poor communication
-- Manual status updates
-- Tracking candidate history
-
-### KPIs
-
-- Time to hire
-- Time to shortlist
-- Offer acceptance rate
-- Candidate response rate
-- Recruiter productivity
-
----
-
-# 6. Hiring Manager Persona
-
-## Profile
-
-Hiring Managers own the final hiring decision.
-
-### Responsibilities
-
-- Approve job requests
-- Review shortlisted candidates
-- Participate in interviews
-- Submit interview decisions
-- Approve offers
-- Monitor hiring progress
-
-### Goals
-
-- Hire skilled employees
-- Reduce hiring delays
-- Improve interview quality
-- Better collaboration with recruiters
-
-### Pain Points
-
-- Lack of candidate visibility
-- Delayed interview feedback
-- Poor interview coordination
-- Long hiring cycles
-
----
-
-# 7. Interviewer Persona
-
-## Profile
-
-Interviewers evaluate candidate skills and submit structured feedback.
-
-### Responsibilities
-
-- Accept interview invitations
-- Conduct interviews
-- Submit scorecards
-- Recommend hiring decisions
-- Provide technical assessments
-
-### Goals
-
-- Consistent evaluations
-- Objective feedback
-- Efficient interview process
-
-### Pain Points
-
-- Missing candidate information
-- Manual feedback forms
-- Scheduling issues
-
----
-
-# 8. Candidate Persona
-
-## Profile
-
-Candidates interact with KrewOps throughout the recruitment lifecycle.
+- Plumber
+- Electrician
+- Carpenter
+- Painter
+- Mason
+- Driver
+- Agriculture Worker
+- Housekeeping Worker
+- Welder
+- General Labourer
 
 ### Responsibilities
 
 - Create profile
-- Upload resume
-- Apply for jobs
-- Schedule interviews
-- Attend interviews
-- Receive updates
-- Accept offers
+- Verify identity
+- Add skills
+- Create service listings
+- Browse work requests
+- Submit quotations
+- Accept bookings
+- Complete assigned work
+- Receive payments
+- Maintain ratings
 
 ### Goals
 
-- Easy application process
-- Transparent communication
-- Quick feedback
-- Professional experience
+- Receive regular work
+- Increase income
+- Build professional reputation
+- Grow customer base
 
 ### Pain Points
 
-- No status visibility
-- Delayed responses
-- Repeated data entry
-- Poor interview scheduling
+- Finding customers
+- Negotiating prices
+- Payment delays
+- Limited visibility
 
-### Candidate Journey
+### Success Metrics
 
-1. Register
-2. Complete profile
-3. Upload resume
-4. Search jobs
-5. Apply
-6. Screening
-7. Interview
-8. Offer
-9. Join organization
+- Completed jobs
+- Earnings
+- Customer ratings
+- Repeat customers
 
 ---
 
-# 9. Platform Administrator Persona
+# 5. Workforce Provider Persona
+
+## Profile
+
+A Workforce Provider supplies multiple workers for large projects or recurring workforce requirements.
+
+Examples include:
+
+- Labour Contractors
+- Workforce Agencies
+- Staffing Providers
+
+### Responsibilities
+
+- Register workforce
+- Manage workers
+- Submit quotations
+- Allocate workers
+- Track ongoing work
+- Manage workforce availability
+
+### Goals
+
+- Secure large contracts
+- Efficient workforce utilization
+- Improve client satisfaction
+
+---
+
+# 6. Service Business Persona
+
+## Profile
+
+A Service Business provides specialized workforce services under a registered business.
+
+Examples include:
+
+- Plumbing Company
+- Electrical Service Provider
+- Cleaning Company
+- Painting Services
+- Pest Control Services
+- Agriculture Equipment Services
+
+### Responsibilities
+
+- Publish service offerings
+- Manage technicians
+- Accept bookings
+- Schedule work
+- Deliver services
+- Manage customer relationships
+
+### Goals
+
+- Increase customer acquisition
+- Build brand reputation
+- Improve service quality
+- Increase revenue
+
+---
+
+# 7. Platform Administrator Persona
 
 ## Responsibilities
 
-- Tenant management
-- User management
-- Subscription management
-- Security monitoring
-- System configuration
-- Feature enablement
-- Platform analytics
-- Audit management
+- Manage categories
+- Verify users
+- Verify workers
+- Moderate marketplace content
+- Monitor fraud
+- Manage disputes
+- Configure platform settings
+- Generate reports
+- Monitor system health
 
 ### Goals
 
 - Platform stability
-- Customer satisfaction
-- Security compliance
+- Marketplace trust
+- Regulatory compliance
 - Operational excellence
 
 ---
 
-# 10. Support Team Persona
+# 8. Customer Support Persona
 
-### Responsibilities
+## Responsibilities
 
-- Resolve customer issues
-- Manage tickets
-- Monitor incidents
-- Escalate technical problems
-- Provide onboarding assistance
+- Resolve booking issues
+- Handle payment disputes
+- Assist account recovery
+- Support verification requests
+- Resolve customer complaints
 
 ### Success Metrics
 
 - Resolution time
 - Customer satisfaction
 - First response time
+- Ticket closure rate
 
 ---
 
-# 11. Finance Persona
+# 9. Finance & Operations Persona
 
-### Responsibilities
+## Responsibilities
 
-- Subscription billing
-- Invoice management
 - Payment reconciliation
-- Financial reporting
-- Refund processing
+- Settlement processing
+- Refund management
+- Commission calculation
+- Revenue reporting
+- Financial compliance
 
 ---
 
-# 12. Executive Leadership Persona
+# 10. Marketplace Interaction Matrix
 
-### Responsibilities
-
-- Review hiring performance
-- Analyze recruitment metrics
-- Workforce planning
-- Budget monitoring
-- Strategic hiring decisions
-
-### Key Dashboards
-
-- Hiring velocity
-- Recruitment cost
-- Offer acceptance rate
-- Recruiter productivity
-- Department hiring status
+| Stakeholder | Post Work | Post Service | Quote | Booking | Payment | Rating |
+|-------------|-----------|--------------|-------|---------|---------|--------|
+| Work Owner | ✓ | | | ✓ | ✓ | ✓ |
+| Worker | | ✓ | ✓ | ✓ | | ✓ |
+| Workforce Provider | | ✓ | ✓ | ✓ | | ✓ |
+| Service Business | | ✓ | ✓ | ✓ | | ✓ |
+| Platform Administrator | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 ---
 
-# 13. Stakeholder Interaction Matrix
+# 11. Permission Boundaries
 
-| Stakeholder | Jobs | Candidates | Interviews | Offers | Reports |
-|-------------|------|------------|------------|--------|----------|
-| Organization | ✓ | ✓ | ✓ | ✓ | ✓ |
-| HR Admin | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Recruiter | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Hiring Manager | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Interviewer | | ✓ | ✓ | | |
-| Candidate | ✓ | ✓ | ✓ | ✓ | |
-| Platform Admin | ✓ | ✓ | ✓ | ✓ | ✓ |
-
----
-
-# 14. Permission Boundaries
-
-Each stakeholder must only access information required for their role.
+Each stakeholder can only access resources required for their role.
 
 Examples include:
 
-- Recruiters cannot access another organization's data.
-- Interviewers can only view candidates assigned to them.
-- Candidates can only view their own applications.
-- Hiring Managers can only access jobs within their departments.
-- HR Administrators manage users only within their organization.
-- Platform Administrators manage global platform settings.
+- Work Owners can manage only their own work requests, bookings, and payments.
+- Workers can manage only their own profile, services, quotations, and assigned work.
+- Workforce Providers can manage only the workers associated with their organization.
+- Service Businesses can manage only their services, bookings, and staff.
+- Platform Administrators have access to global platform management functions.
 
-Role-Based Access Control (RBAC) combined with fine-grained authorization ensures secure separation of responsibilities across the platform.
+Role-Based Access Control (RBAC) combined with fine-grained authorization ensures secure access across the marketplace.
 
 ---
 
-# 15. Summary
+# 12. Summary
 
-Clearly defined stakeholders and user personas ensure that KrewOps delivers tailored experiences for every participant in the recruitment lifecycle. By understanding the goals, responsibilities, challenges, and success metrics of each persona, the platform can provide intuitive workflows, secure access controls, and efficient collaboration that collectively improve hiring outcomes.
+KrewOps serves a diverse workforce ecosystem by connecting work owners, workers, workforce providers, and service businesses through a unified digital marketplace. Each stakeholder has clearly defined responsibilities, permissions, and goals that enable secure collaboration, transparent pricing, efficient bookings, digital payments, and reputation-based trust. This stakeholder model forms the foundation for the platform's business workflows, security model, and future product evolution.
