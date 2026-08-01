@@ -4,386 +4,397 @@
 
 # 1. Introduction
 
-User journeys describe how different users interact with KrewOps to accomplish their goals. These journeys help identify required features, system interactions, business rules, and user experience improvements.
+User journeys describe how different users interact with the KrewOps marketplace to achieve their goals. These journeys define the end-to-end experience for work owners, workers, workforce providers, service businesses, and platform administrators.
 
-This chapter outlines the primary workflows for each stakeholder throughout the recruitment lifecycle.
+KrewOps supports two primary business models:
 
----
+1. Work Owner posts work and receives quotations from workers.
+2. Worker or Service Business advertises services and receives bookings directly from work owners.
 
-# 2. Recruitment Lifecycle Overview
-
-The end-to-end recruitment process in KrewOps follows this sequence:
-
-1. Job Requisition
-2. Job Approval
-3. Job Publication
-4. Candidate Application
-5. Resume Screening
-6. Candidate Shortlisting
-7. Interview Scheduling
-8. Interview Evaluation
-9. Hiring Decision
-10. Offer Generation
-11. Offer Acceptance
-12. Employee Onboarding
+These journeys form the foundation for product design, workflows, APIs, notifications, and business rules.
 
 ---
 
-# 3. Recruiter Journey
+# 2. Marketplace Journey Overview
+
+KrewOps supports two primary marketplace journeys.
+
+## Journey A – Work Request Marketplace
+
+```text
+Register
+    │
+    ▼
+Create Profile
+    │
+    ▼
+Post Work
+    │
+    ▼
+Workers Discover Work
+    │
+    ▼
+Workers Submit Quotes
+    │
+    ▼
+Owner Reviews Quotes
+    │
+    ▼
+Worker Selected
+    │
+    ▼
+Booking Created
+    │
+    ▼
+Work Started
+    │
+    ▼
+Work Completed
+    │
+    ▼
+Payment
+    │
+    ▼
+Rating & Review
+```
+
+---
+
+## Journey B – Service Marketplace
+
+```text
+Worker Registers
+        │
+        ▼
+Create Service Listing
+        │
+        ▼
+Owner Searches Service
+        │
+        ▼
+View Worker Profile
+        │
+        ▼
+Book Worker
+        │
+        ▼
+Booking Confirmation
+        │
+        ▼
+Work Completed
+        │
+        ▼
+Payment
+        │
+        ▼
+Rating & Review
+```
+
+---
+
+# 3. Work Owner Journey
 
 ## Objective
 
-Efficiently hire qualified candidates while minimizing manual effort.
+Find trusted workers quickly and complete work efficiently.
 
-### Journey Steps
+### Journey
 
-#### Step 1: Login
+### Step 1 – Register
 
-- Authenticate using organization credentials.
-- Access recruiter dashboard.
+- Mobile number verification
+- Profile creation
 
-#### Step 2: Create Job
+### Step 2 – Post Work
 
-- Select department.
-- Enter job details.
-- Define required skills.
-- Specify experience.
-- Configure interview rounds.
-- Submit for approval.
+Provide:
 
-#### Step 3: Publish Job
-
-Once approved:
-
-- Publish internally
-- Publish externally
-- Share on career portal
-- Share with recruitment partners
-
-#### Step 4: Receive Applications
-
-Recruiters can:
-
-- Review resumes
-- Filter candidates
-- Search by skills
-- Sort by experience
-- Apply AI recommendations
-
-#### Step 5: Shortlist Candidates
-
-Recruiter selects suitable candidates and moves them to interview stage.
-
-#### Step 6: Schedule Interviews
-
-Recruiter:
-
-- Selects interview panel
-- Chooses available slots
-- Sends interview invitations
-- Tracks confirmations
-
-#### Step 7: Collect Feedback
-
-Recruiter reviews:
-
-- Technical scores
-- Behavioral assessments
-- Interview comments
-- Hiring recommendations
-
-#### Step 8: Generate Offer
-
-If approved:
-
-- Prepare compensation package
-- Generate offer letter
-- Send electronically
-
-#### Step 9: Close Position
-
-Recruiter marks:
-
-- Position Filled
-- Position Cancelled
-- Position Reopened
-
----
-
-# 4. Candidate Journey
-
-## Objective
-
-Apply for suitable jobs with a simple and transparent recruitment experience.
-
-### Journey Steps
-
-#### Step 1: Registration
-
-Candidate creates account.
-
-#### Step 2: Profile Creation
-
-Candidate enters:
-
-- Personal information
-- Education
-- Experience
-- Skills
-- Certifications
-- Resume
-
-#### Step 3: Search Jobs
-
-Candidate filters jobs using:
-
-- Skills
+- Category
+- Description
 - Location
+- Preferred date
+- Budget (Optional)
+- Photos (Optional)
+
+### Step 3 – Receive Quotations
+
+Work owners receive quotations from interested workers including:
+
+- Price
+- Estimated duration
+- Worker rating
 - Experience
-- Employment type
-- Department
 
-#### Step 4: Apply
+### Step 4 – Compare Workers
 
-Application submitted successfully.
+Compare:
 
-System performs:
+- Ratings
+- Reviews
+- Price
+- Distance
+- Experience
+- Availability
 
-- Duplicate application validation
-- Resume attachment validation
-- Required field validation
+### Step 5 – Book Worker
 
-#### Step 5: Track Application
+Select worker.
 
-Candidate views status updates:
+System creates booking.
 
-- Applied
-- Under Review
-- Shortlisted
-- Interview Scheduled
-- Interview Completed
-- Selected
-- Rejected
-- Offer Sent
-- Hired
+### Step 6 – Track Work
 
-#### Step 6: Attend Interviews
+View
 
-Candidate receives:
+- Booking status
+- Worker arrival
+- Work progress
 
-- Calendar invite
-- Meeting link
-- Interview instructions
-- Reminder notifications
+### Step 7 – Payment
 
-#### Step 7: Receive Offer
+Complete payment after work completion.
 
-Candidate can:
+### Step 8 – Rating
 
-- Accept
-- Reject
-- Request clarification
+Rate worker and provide review.
 
 ---
 
-# 5. Hiring Manager Journey
+# 4. Worker Journey
 
 ## Objective
 
-Evaluate shortlisted candidates and make hiring decisions.
+Receive work opportunities and grow income.
 
-### Journey Steps
+### Step 1 – Register
 
-- Review job request
-- Approve hiring
-- Review shortlisted candidates
-- Participate in interviews
-- Compare candidates
-- Submit recommendation
-- Approve offer
+OTP verification.
+
+### Step 2 – Complete Profile
+
+Add
+
+- Skills
+- Experience
+- Service areas
+- Photos
+- Identity verification
+
+### Step 3 – Publish Services
+
+Create service listings.
+
+OR
+
+Browse work requests.
+
+### Step 4 – Submit Quotation
+
+Provide
+
+- Price
+- Estimated duration
+- Remarks
+
+### Step 5 – Receive Booking
+
+Booking notification received.
+
+Accept or decline booking.
+
+### Step 6 – Perform Work
+
+Update
+
+- Started
+- In Progress
+- Completed
+
+### Step 7 – Receive Payment
+
+Track
+
+- Earnings
+- Settlement
+- Payment history
 
 ---
 
-# 6. Interviewer Journey
+# 5. Workforce Provider Journey
 
 ## Objective
 
-Conduct structured and unbiased interviews.
+Supply workforce for larger work requirements.
 
-### Journey Steps
+### Journey
 
-- Receive interview assignment
-- Review candidate profile
-- Conduct interview
-- Complete evaluation form
-- Submit scorecard
-- Recommend decision
+- Register organization
+- Add workers
+- Manage workforce
+- Submit quotations
+- Allocate workers
+- Track work progress
+- Receive payments
 
 ---
 
-# 7. HR Administrator Journey
+# 6. Service Business Journey
 
 ## Objective
 
-Configure and manage recruitment operations.
+Advertise professional services and receive customer bookings.
+
+### Journey
+
+- Register business
+- Publish services
+- Manage technicians
+- Receive bookings
+- Schedule work
+- Complete service
+- Collect payment
+- Build ratings
+
+---
+
+# 7. Platform Administrator Journey
 
 ### Activities
 
-- Create departments
-- Configure interview workflows
-- Create roles
-- Assign permissions
-- Manage users
-- Configure templates
-- Manage notifications
-- Configure organization settings
+- User verification
+- Worker verification
+- Category management
+- Skill management
+- Marketplace moderation
+- Payment monitoring
+- Fraud monitoring
+- Analytics
+- Reports
 
 ---
 
-# 8. Platform Administrator Journey
+# 8. Booking Journey
 
-## Objective
-
-Maintain platform health and tenant operations.
-
-### Activities
-
-- Provision organizations
-- Manage subscriptions
-- Monitor platform usage
-- Manage security settings
-- Review audit logs
-- Handle escalations
-- Monitor infrastructure
-
----
-
-# 9. Offer Management Journey
-
-### Recruiter
-
-- Prepare offer
-- Select compensation template
-- Attach documents
-- Obtain approvals
-- Send offer
-
-### Candidate
-
-- View offer
-- Download documents
-- Accept
-- Reject
-- Negotiate
-
-### HR
-
-- Finalize joining date
-- Trigger onboarding workflow
+```text
+Work Posted
+      │
+      ▼
+Quotation Submitted
+      │
+      ▼
+Quotation Accepted
+      │
+      ▼
+Booking Created
+      │
+      ▼
+Worker Assigned
+      │
+      ▼
+Work Completed
+```
 
 ---
 
-# 10. Job Approval Journey
+# 9. Payment Journey
 
-1. Recruiter creates job.
-2. Hiring Manager reviews request.
-3. Budget validation performed.
-4. Department approval obtained.
-5. HR approval completed.
-6. Job published automatically.
-
----
-
-# 11. Interview Scheduling Journey
-
-1. Recruiter selects interviewers.
-2. Available time slots identified.
-3. Candidate selects preferred slot.
-4. Calendar invitation sent.
-5. Reminder notifications generated.
-6. Interview completed.
-7. Feedback submitted.
+```text
+Booking Completed
+        │
+        ▼
+Payment Initiated
+        │
+        ▼
+Payment Successful
+        │
+        ▼
+Settlement Processed
+        │
+        ▼
+Receipt Generated
+```
 
 ---
 
-# 12. Communication Journey
+# 10. Communication Journey
 
-Throughout recruitment the platform communicates using:
+Notifications are sent through:
 
-- Email
-- SMS (optional)
-- WhatsApp (optional)
-- In-app notifications
-- Push notifications
+- Push Notifications
+- In-App Notifications
+- SMS (Optional)
+- WhatsApp (Optional)
+- Email (Optional)
 
 Events include:
 
 - Registration
-- Application submitted
-- Interview scheduled
-- Interview reminder
-- Offer sent
-- Offer accepted
-- Application rejected
+- Work Posted
+- Quote Submitted
+- Booking Confirmed
+- Booking Cancelled
+- Work Started
+- Work Completed
+- Payment Successful
+- Rating Received
 
 ---
 
-# 13. Exceptional Journeys
+# 11. Exceptional Journeys
 
-## Candidate Withdraws
+## Owner Cancels Booking
 
-- Status updated
-- Recruiter notified
-- Position reopened
+- Worker notified
+- Refund policy applied
+- Booking updated
 
-## Interview Cancelled
+## Worker Rejects Booking
 
-- Candidate notified
-- New schedule requested
-- Calendar updated
+- Owner notified
+- Booking reopened
 
-## Offer Declined
+## Payment Failure
 
-- Recruiter notified
-- Hiring Manager informed
-- Next shortlisted candidate considered
+- Retry payment
+- Notify users
 
-## Job Closed
+## Worker No Show
 
-Remaining applicants receive automated notifications.
+- Owner reports issue
+- Platform support notified
 
 ---
 
-# 14. User Experience Principles
+# 12. User Experience Principles
 
-KrewOps user journeys follow these principles:
+KrewOps follows these principles:
 
-- Minimal clicks
-- Clear navigation
-- Consistent interfaces
+- Mobile-first design
+- Minimal user effort
+- Transparent pricing
 - Real-time updates
-- Transparent status tracking
-- Mobile-friendly interactions
-- Accessibility compliance
-- Fast response times
+- Location-aware discovery
+- Secure payments
+- Fast booking
+- Simple navigation
+- Multilingual support
 
 ---
 
-# 15. Journey Success Metrics
+# 13. Journey Success Metrics
 
-Key metrics include:
-
-- Time to create job
-- Application completion rate
-- Resume review time
-- Interview scheduling time
-- Offer acceptance rate
-- Candidate satisfaction
-- Recruiter productivity
-- Hiring cycle duration
+- Time to post work
+- Time to receive first quotation
+- Booking conversion rate
+- Average response time
+- Work completion rate
+- Payment success rate
+- Customer satisfaction
+- Worker earnings
+- Repeat bookings
 
 ---
 
-# 16. Summary
+# 14. Summary
 
-The user journeys define how every stakeholder interacts with KrewOps from job creation through onboarding. By mapping these workflows, the platform ensures seamless collaboration, consistent user experiences, and efficient recruitment processes while providing visibility, automation, and accountability at every stage of the hiring lifecycle.
+KrewOps provides two complementary marketplace journeys: work owners can publish work requests and receive quotations from workers, while workers and service businesses can advertise their services for direct booking. These user journeys establish a transparent, mobile-first, and trusted workforce marketplace that simplifies work discovery, booking, payments, and reputation management for all participants.
